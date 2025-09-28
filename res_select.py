@@ -26,8 +26,8 @@ class ResolutionSelector:
             return (512, 512)
 
 NODE_CLASS_MAPPINGS = {
-    "SaveImageCustom": ResolutionSelector
+    "SelectCustomResolutions": ResolutionSelector
 }
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "SaveImageCustom": "FlowRider Resolution Selector"
+    "SaveCustomResolutions": "FlowRider Resolution Selector"
 }
