@@ -1,0 +1,3 @@
+# Ignore ComfyUI files
+__pycache__/
+*.pyc
