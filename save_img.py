@@ -17,10 +17,11 @@ class SaveImageCustom:
     
     RETURN_TYPES = ()
     NAME = "flowrider_img_saver"
+    FUNCTION = "save_images_jpeg"
     OUTPUT_NODE = True
     CATEGORY = "image/save"
     
-    def save_img_jpeg(self, images, quality=95, name_prefix="Image", output_dir="output\\custom_saves"):
+    def save_images_jpeg(self, images, quality=95, name_prefix="Image", output_dir="output\\custom_saves"):
         if images is None or images.shape[0] == 0:
             print("Warning: No images recieved by save-node.")
             return {"ui": {}}
@@ -41,6 +42,7 @@ class SaveImageCustom:
             
             img_pil.save(complete_file_path, quality=quality, subsampling=0)
             print(f'Info: Saved Image to: {complete_file_path}')
+            return {"ui": {}}
 
 NODE_CLASS_MAPPINGS = {
     "SaveImageCustom": SaveImageCustom
